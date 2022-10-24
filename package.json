@@ -1,0 +1,21 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "builder-package-mac": "electron-builder --mac"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^20.0.3",
+    "electron-builder": "^22.10.4"
+  },
+  "dependencies": {
+  },
+  "build": {
+    "productName": "开发工具"
+  }
+}

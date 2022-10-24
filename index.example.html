@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hello world</title>
+</head>
+<body>
+
+<div>
+  hello world
+</div>
+
+<h1>ajax请求结果</h1>
+<textarea id="response_result">
+
+</textarea>
+
+</body>
+<script>
+    //原生ajax请求方式：
+var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://example.com/", true);
+    //xhr.withCredentials = true; //支持跨域发送cookies 这个是关键设置之一
+
+    // 请求结束后
+    xhr.onload = function ($e){
+        if(xhr.status == 200){
+            console.log('请求成功')
+        }
+        console.log('请求结果');
+        console.log(xhr.responseText);
+        document.getElementById('response_result').value = xhr.responseText;
+    };
+    xhr.ontimeout = function(e) {};
+    xhr.onerror = function(e) {};
+    xhr.upload.onprogress = function(e) {}
+
+    xhr.send();
+</script>
+</html>
