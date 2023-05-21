@@ -4,8 +4,8 @@ const { app, BrowserWindow } = require('electron')
 function createWindow () {
     // 创建浏览器窗口
     let win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1300,
+        height: 700,
         webPreferences: {
             nodeIntegration: true,
             webSecurity: true,// 设置web安全性，设置为false表示关闭比如跨域限制就没了
