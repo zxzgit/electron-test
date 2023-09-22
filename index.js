@@ -23,7 +23,7 @@ function createWindow () {
     //win.loadURL('https://www.baidu.com')
 
     // Open the DevTools.
-    //win.webContents.openDevTools()
+    win.webContents.openDevTools()
 }
 
 /**
@@ -55,8 +55,12 @@ function ready(){
     ipcMain.on('asynchronous-message', function(event, arg) {
         console.log('主进程侦听事件', arg);
 
-        // 给子进程发送消息。子进程可以通过 ipcRenderer.on() 来绑定监听
-        event.sender.send('renderer_event_listen_1', 'pong');
+        // 方式一、给子进程发送消息。子进程可以通过 ipcRenderer.on() 来绑定监听
+        //event.sender.send('renderer_event_listen_1', 'pong');
+
+        // 方式二、子进程发送消息。子进程可以通过 ipcRenderer.on() 来绑定监听
+        let win = BrowserWindow.getFocusedWindow()
+        win && win.webContents.send('renderer_event_listen_1', 'pong ping');
     });
 
     // 快捷键定义,这个是全局的，不管你在什么软件按这个快捷键都会触发
