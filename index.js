@@ -10,7 +10,9 @@ function createWindow () {
         width: 1300,
         height: 700,
         webPreferences: {
+            // 配置webPreferences的nodeIntegration: true和contextIsolation: false 才可以使用node语法映入node模块代码
             nodeIntegration: true,
+            contextIsolation: false,
             webSecurity: true,// 设置web安全性，设置为false表示关闭比如跨域限制就没了
             /**
              * 该脚本可以在页面的其他脚本执行前执行。脚本可以使用nodejs的api。可以使用require()引入模块使用
