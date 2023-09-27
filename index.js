@@ -9,6 +9,7 @@ console.log(path.join(__dirname,"src/preload.js"))
 function createWindow () {
     // 创建浏览器窗口
     let win = new BrowserWindow({
+        //titleBarStyle: 'hiddenInset', // 设置无边框，解决拖拽问题 在特定html元素使用 style="-webkit-app-region: drag" 来实现
         width: 1300,
         height: 700,
         webPreferences: {
