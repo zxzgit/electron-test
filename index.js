@@ -73,7 +73,11 @@ function ready(){
         let win = BrowserWindow.getFocusedWindow()
         // 高亮搜索到的内容，由于这个快捷点是操作系统全局的，要判断是否获取得到win
         if(win){
-            let findResult = win.webContents.findInPage("soa")
+            let findResult = win.webContents.findInPage("soa", {
+                forward: true, // true标示向后搜索,false表示向前
+                findNext: true,
+                matchCase: false, // 大小写匹配
+            })
             console.log('搜索结果第几个匹配结果（索引从1开始）', findResult)
 
             // found-in-page 会多次设置，这里 win.isSet 标记只设置一次
