@@ -4,7 +4,7 @@ const path = require('path');
 
 const isMac = process.platform === 'darwin'
 
-console.log(path.join(__dirname,"src/preload.js"))
+console.log(path.join(__dirname,"preload.js"))
 
 function createWindow () {
     // 创建浏览器窗口
@@ -20,7 +20,7 @@ function createWindow () {
             /**
              * 该脚本可以在页面的其他脚本执行前执行。脚本可以使用nodejs的api。可以使用require()引入模块使用
              */
-            preload: path.join(__dirname,"src/preload.js")
+            preload: path.join(__dirname,"preload.js")
         }
     })
     // 加载index.html文件
