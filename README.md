@@ -3,7 +3,9 @@
 # 搭建
 - 1、复制 `index.example.html` 为 index.html
 - 2、`npm run start`就可以启动测试
-- 3、打包：`npm run builder-package-mac`打包可执行程序
+- 3、
+  - 方式一:`npm run electron-package-run`
+  - 方式二:`npm run builder-package-mac`打包可执行程序(需要依赖python程序,我不建议使用这个,因为还要第三方软件打包，太费事😑)
 
 # 常见问题
 

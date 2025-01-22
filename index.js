@@ -28,7 +28,7 @@ function createWindow () {
     //win.loadURL('https://www.baidu.com')
 
     // Open the DevTools.
-    win.webContents.openDevTools()
+    //win.webContents.openDevTools()
 
     // 搜索事件定义， 事件相关文档：https://www.electronjs.org/zh/docs/latest/api/web-contents， 清除搜索选中 BrowserWindow.getFocusedWindow().webContents.stopFindInPage('clearSelection');
     win.webContents.on('found-in-page', (event, search_result) => {
