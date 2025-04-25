@@ -15,8 +15,7 @@
 
 在 ~/.npmrc 中添加如下内容
 ````
-registry=https://registry.npm.taobao.org/
-sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-phantomjs_cdnurl=http://npm.taobao.org/mirrors/phantomjs
-ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+registry=https://registry.npmmirror.com
+electron_mirror=https://cdn.npmmirror.com/binaries/electron/
+electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
 ````
